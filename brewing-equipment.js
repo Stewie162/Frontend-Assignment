@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="btn-container">
                     <button class="btn" data-name="${item.name}" data-price="${
         item.price
-      }">Add to Cart</button>
+      }"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                 </div>
             `;
       equipmentGrid.appendChild(equipmentCard);
@@ -127,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function animateCards() {
-    // Ensure gsap is available.  If not, you'd need to import it.
     if (typeof gsap !== "undefined") {
       gsap.from(".product-card", {
         duration: 0.5,
@@ -151,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = e.target.getAttribute("data-name");
       const price = parseFloat(e.target.getAttribute("data-price"));
       const image = card.querySelector("img").src;
-      console.log(image);
       addToCart(name, price, image);
     }
   });

@@ -152,6 +152,10 @@ main {
   margin: 0 auto;
 }
 
+.featured-products, .about-us {
+  margin: 2rem;
+}
+
 /* Product Grid */
 .product-grid {
   display: grid;
@@ -163,6 +167,9 @@ main {
 .product-card {
   background-color: var(--card-background);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform var(--transition-speed),
@@ -176,7 +183,7 @@ main {
 
 .product-card img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -249,9 +256,30 @@ main {
 }
 
 /* Coffee Selection Page */
+#clear-search {
+  position: absolute;
+  right: 40px; /* Position it before the search button */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 10px;
+  height: 100%;
+  display: none; /* Hidden by default */
+}
+
+#clear-search:hover {
+  color: #333;
+}
+
 .search-container {
+  position: relative;
   display: flex;
-  margin-bottom: 2rem;
+  max-width: 500px;
+  margin: 0 auto 30px;
 }
 
 #coffee-search {
@@ -259,6 +287,7 @@ main {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px 0 0 5px;
+  padding-right: 80px;
 }
 
 #search-btn {
@@ -268,6 +297,44 @@ main {
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+}
+
+.coffee-selection {
+  margin: 2rem;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #3a2618;
+  font-size: 1.2rem;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3a2618;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Brewing Equipment Page */
@@ -405,8 +472,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: 2rem;
 }
 
 .footer-section {
