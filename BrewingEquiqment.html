@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brewing Equipment - Boutique Coffee Shop</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -22,13 +22,26 @@
           <li><a href="EventsAndWorkshops.html">Events & Workshops</a></li>
           <li><a href="SpecialOffer.html">Special Offers</a></li>
         </ul>
-        <div class="mobile-menu-icon">☰</div>
+        <div class="mobile-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="brewing-equipment">
         <h1>Brewing Equipment</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search our equipments..."
+          />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
         <div class="product-grid" id="equipment-grid">
           <!-- Equipment products will be dynamically added here -->
         </div>
@@ -64,6 +77,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="brewing-equipment.js"></script>
+    <script src="./javascript/brewing-equipment.js"></script>
   </body>
 </html>
