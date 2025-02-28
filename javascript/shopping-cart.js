@@ -52,12 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartItem = document.createElement("div");
         cartItem.classList.add("cart-item");
         cartItem.innerHTML = `
-          <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-          <div class="cart-item-details">
+          <div>
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+          </div>
+          <div class="btn-price-container">
+            <div class="cart-item-details">
             <div class="cart-item-name"><span class="name-span">Product name:</span> ${item.name}</div>
             <div class="cart-item-price"><span class="price-span">Product price:</span> $${item.price.toFixed(2)}</div>
           </div>
           <button class="remove-item" data-index="${index}">Remove</button>
+          </div>
         `;
         cartItems.appendChild(cartItem);
         total += item.price;
