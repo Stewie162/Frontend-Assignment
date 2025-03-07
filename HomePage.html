@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boutique Coffee Shop</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="main-nav">
+        <a class="logo" href="HomePage.html">Boutique Coffee</a>
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="CoffeeSelection.html">Coffee Selection</a></li>
+          <li><a href="BrewingEquiqment.html">Brewing Equipment</a></li>
+          <li><a href="ShoppingCart.html">Shopping Cart</a></li>
+          <li><a href="EventsAndWorkshops.html">Events & Workshops</a></li>
+          <li><a href="SpecialOffer.html">Special Offers</a></li>
+        </ul>
+        <div class="mobile-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <!-- Video -->
+        <div class="video-container">
+          <video autoplay muted loop playsinline class="hero-video">
+            <source src="video/coffee-blending.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/signature-blend.jpg" alt="Signature Blend" />
+            <h3>Signature Blend</h3>
+            <p>Our award-winning house blend</p>
+          </div>
+          <div class="product-card">
+            <img src="images/single-origin.png" alt="Single Origin Ethiopian" />
+            <h3>Single Origin Ethiopian</h3>
+            <p>Bold and fruity flavors</p>
+          </div>
+          <div class="product-card">
+            <img src="images/pour-over-kit.jpg" alt="Pour-Over Kit" />
+            <h3>Pour-Over Kit</h3>
+            <p>Perfect for home brewing</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <h2>About Us</h2>
+        <p>
+          At Boutique Coffee, we're passionate about bringing you the finest
+          coffee experiences. From carefully selected beans to expert brewing
+          techniques, we're here to elevate your coffee journey.
+        </p>
+      </section>
+    </main>
+
+    <!-- Map -->
+    <section class="map-section">
+      <div class="map-container">
+        <h2>Our Location</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4968.778592312402!2d96.0920148243733!3d21.941091786823645!2m3!1f0!2f0!3f0!3m2!1i1024!2
+                      i768!4f13.1!3m3!1m2!1s0x30cb6d23f0d27411%3A0x24146be01e4e5646!2sMandalay!5e0!3m2!1sen!2smm!4v1737466203776!5m2!1sen!2smm"
+            width="100%"
+            height="350"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps location of Bean Boutique Coffee Shop"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@boutiquecoffee.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Boutique Coffee. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./javascript/script.js" defer></script>
+  </body>
+</html>
