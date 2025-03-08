@@ -308,7 +308,8 @@ main {
 
 .featured-products,
 .about-us,
-.map-container {
+.map-container,
+.events-and-workshops {
   margin: 2rem 1rem;
 }
 
@@ -323,14 +324,14 @@ main {
 }
 
 .product-card {
-  width: 100%;
-  max-width: 450px;
+  width: 450px;
   height: auto;
   min-height: 450px;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -656,11 +657,34 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 1.5rem;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   transition: transform var(--transition-speed);
 }
 
 .event-card:hover {
   transform: translateY(-5px);
+}
+
+.event-card .event-card-img img {
+  height: 280px;
+  width: 260px;
+  overflow: hidden;
+  object-fit: fill;
+  margin-left: 25px;
+}
+
+.event-card-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to four lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em; /* Adjust line-height for better readability */
+  max-height: 6em; /* Should be 4 * line-height */
+  word-break: break-word;
+  text-align: justify;
 }
 
 .registration-form {
@@ -704,6 +728,18 @@ main {
 .offer-card:hover,
 .subscription-card:hover {
   transform: translateY(-5px);
+}
+
+/* Abous Us */
+.about-us {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Footer */
@@ -957,7 +993,8 @@ footer {
   .brewing-equipment,
   .events-workshops,
   .special-offers,
-  .subscriptions {
+  .subscriptions,
+  .events-and-workshops {
     margin: 1.5rem 0.75rem;
   }
 

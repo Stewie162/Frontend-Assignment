@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const coffeeCard = document.createElement("div");
       coffeeCard.classList.add("product-card");
       coffeeCard.innerHTML = `
-        <img src="${coffee.image}" alt="${coffee.name}">
+        <img src="${coffee.image}" alt="${coffee.name}" />
         <h3>${coffee.name}</h3>
         <p class="origin">${coffee.origin}</p>
         <p>${coffee.description}</p>
